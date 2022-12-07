@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "minimal-devsecops-example"
+version = "0.1.0"
+description = "Minimal DevSecOps example to show how security could be integrated into the workflow"
+authors = ["Florian Angermeir <florian.angermeir@tum.de>"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{include = "minimal_devsecops_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
