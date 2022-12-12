@@ -29,15 +29,15 @@ jobs:
 
 
       ## Start: Version 1
-      - name: Trivy
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ steps.meta.outputs.tags }}
-          format: 'table'
-          exit-code: '1'
-        env:
-          TRIVY_USERNAME: ${{ github.actor }}
-          TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Trivy
+      #  uses: aquasecurity/trivy-action@master
+      #  with:
+      #    image-ref: ${{ steps.meta.outputs.tags }}
+      #    format: 'table'
+      #    exit-code: '1'
+      #  env:
+      #    TRIVY_USERNAME: ${{ github.actor }}
+      #    TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
       ## End: Version 1
 
 
@@ -45,24 +45,24 @@ jobs:
 
 
       ## Start: Version 2
-      #- name: Trivy
-      #  uses: aquasecurity/trivy-action@master
-      #  with:
-      #    image-ref: ${{ steps.meta.outputs.tags }}
-      #    format: 'sarif'
-      #    output: 'trivy-results.sarif'
-      #  env:
-      #    TRIVY_USERNAME: ${{ github.actor }}
-      #    TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-      #
-      #- name: Upload artifact
-      #  uses: actions/upload-artifact@main
-      #  with:
-      #    name: 'trivy-results.sarif'
-      #    path: 'trivy-results.sarif'
-      #
-      #- name: Upload Trivy scan results to GitHub Security tab
-      #  uses: github/codeql-action/upload-sarif@v2
-      #  with:
-      #    sarif_file: 'trivy-results.sarif'
+      - name: Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ steps.meta.outputs.tags }}
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+        env:
+          TRIVY_USERNAME: ${{ github.actor }}
+          TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: 'trivy-results.sarif'
+          path: 'trivy-results.sarif'
+      
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results.sarif'
       ## End: Version 2
