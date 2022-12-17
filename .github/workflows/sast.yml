@@ -14,10 +14,10 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      ## Start: Version 0
+      # Start: Version 0
       - name: Checkout repository
         uses: actions/checkout@v3
-      ## End: Version 0
+      # End: Version 0
 
 
 
@@ -37,25 +37,25 @@ jobs:
 
 
 
-      ## Start: Version 2
-      #- name: Install dependencies
+      # # Start: Version 2
+      # - name: Install dependencies
       #  shell: bash
       #  run: |
       #    pip install bandit-sarif-formatter bandit
 
-      #- name: Bandit
+      # - name: Bandit
       #  shell: bash
       #  run: |
       #    bandit -f sarif -o results.sarif -r --exit-zero .
         
-      #- name: Upload artifact
+      # - name: Upload artifact
       #  uses: actions/upload-artifact@main
       #  with:
       #    name: results.sarif
       #    path: results.sarif
 
-      #- name: Upload SARIF file
+      # - name: Upload SARIF file
       #  uses: github/codeql-action/upload-sarif@v2
       #  with:
       #    sarif_file: results.sarif
-      ## End: Version 2
+      # # End: Version 2
