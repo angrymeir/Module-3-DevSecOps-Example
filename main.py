@@ -9,7 +9,7 @@ workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scann
 
 
 def never_called(bla):
-    aws_access_token = ""
+    aws_access_token = "TESTLALEMEL33243OLIB"
     os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=False)
 
 
@@ -31,7 +31,7 @@ def hello_world():
 
 
 def main():
-    app.run(debug=False)
+    app.run(debug=True)
 
 
 if __name__ == '__main__':
