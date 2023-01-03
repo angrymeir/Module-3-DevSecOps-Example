@@ -8,10 +8,6 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 name: Create and publish a Docker image
-# change sample 1
-Ali changes 1
-
-Ali Change 2
 on:
   push:
     branches: ['main']
