@@ -1,0 +1,7 @@
+- name: Gitleaks Scan
+  # You may pin to the exact commit or the version.
+  # uses: eeveebank/github-actions-gitleaks@f83845507ea4e7f181cd2e61f9e7173048cdbfac
+  uses: eeveebank/github-actions-gitleaks@1.0.1
+  with:
+    # Look behind depth
+    depth: 
