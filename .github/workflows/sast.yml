@@ -43,10 +43,7 @@ jobs:
         run: |
           pip install bandit-sarif-formatter bandit
           
-        permissions:
-         actions: read
-         contents: read
-         security-events: write
+       
 
       - name: Bandit
         shell: bash
