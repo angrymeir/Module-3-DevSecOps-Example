@@ -44,7 +44,7 @@ jobs:
 
 
 
-      ## Start: Version 2
+      # Start: Version 2
       - name: Trivy
         uses: aquasecurity/trivy-action@master
         with:
@@ -65,4 +65,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
-      ## End: Version 2
+      # End: Version 2
