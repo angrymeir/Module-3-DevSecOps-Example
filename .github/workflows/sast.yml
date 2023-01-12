@@ -37,7 +37,7 @@ jobs:
 
 
 
-      ## Start: Version 2
+      # Start: Version 2
       - name: Install dependencies
         shell: bash
         run: |
@@ -58,4 +58,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: results.sarif
-      ## End: Version 2
+      # End: Version 2
