@@ -13,9 +13,7 @@ workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scann
 def serve_image(state):
     return send_file("bla.jpeg", mimetype="image/png")
 
-def never_called(bla):
-    aws_access_token = "TESTLALEMEL33243OLIB"
-    os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=False)
+
 
 @app.route("/")
 def hello_world():
@@ -31,7 +29,7 @@ def hello_world():
 
 
 def main():
-    app.run(debug=True)
+    app.run(debug=False)
 
 
 if __name__ == '__main__':
