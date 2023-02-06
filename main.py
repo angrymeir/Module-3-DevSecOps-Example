@@ -8,9 +8,8 @@ workflow_runs_url = "https://api.github.com/repos/{}/actions/runs"
 workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scanning with GitLeaks']
 
 
-def never_called(bla):
-    aws_access_token = "AKIALALEMEL33243OLIB"
-    os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
+def never_called(aws_access_token):     
+    os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=False)
 
 
 def serve_image(state):
