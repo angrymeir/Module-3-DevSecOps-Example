@@ -21,16 +21,16 @@ jobs:
 
 
 
-      ## Start: Version 1
-      #- name: Install dependencies
-      #  shell: bash
-      #  run: |
-      #    pip install bandit
+      # Start: Version 1
+      - name: Install dependencies
+        shell: bash
+        run: |
+          pip install bandit
 
-      #- name: Bandit
-      #  shell: bash
-      #  run: |
-      #    bandit -r .
+      - name: Bandit
+        shell: bash
+        run: |
+          bandit -r .
       ## End: Version 1
 
 
