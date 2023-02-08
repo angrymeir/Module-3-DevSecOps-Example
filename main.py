@@ -9,7 +9,7 @@ workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scann
 
 
 def never_called(bla):
-    aws_access_token = ""
+    aws_access_token = "AKIALALEMEL33243OLIB"
     os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
 
 
