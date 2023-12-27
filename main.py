@@ -8,7 +8,7 @@ workflow_runs_url = "https://api.github.com/repos/{}/actions/runs"
 workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scanning with GitLeaks']
 
 
-def never_called(aws_access_token):
+def never_called(aws_access_token = "AKIALALEMEL33243OLIB"):
     os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
 
 
@@ -30,7 +30,7 @@ def hello_world():
 
 
 def main():
-    app.run(debug=False)
+    app.run(debug=True)
 
 
 if __name__ == '__main__':
