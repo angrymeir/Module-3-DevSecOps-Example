@@ -67,7 +67,7 @@ Under normal circumstances it is not your responsibility to fix security issues.
 
 Commit and check `Security > Code Scanning` for findings. Where you able to solve all issues the way described here?
 
-### 4. Shift-left security activities
+## 4. Shift-left security activities
 Your team really appreciates your hard work to help them secure the project.  
 Now that they have a good overview of the current security state they want to become a bit more proactive and shift the security activities more left. Which means directly fixing security findings before they are even introduced to the default branch of the project.  
 
