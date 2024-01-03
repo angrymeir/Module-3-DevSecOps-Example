@@ -45,7 +45,7 @@ Now, lets go on to step three and actually integrate the tools. Steps to perform
 ### 3.1 Improve visualisation of findings
 
 So you have the security activities implemented and you see the respective artifacts in the logs.  
-While this is already awesome, your team is not satisfied with this solution, the feedbackloop is not implemented sufficiently. Understandably, they don't want to always check the workflow-run-logs to get an overview of the current security state in their project.  
+While this is already awesome, your team is not satisfied with this solution, the feedback loop is not implemented sufficiently. Understandably, they don't want to always check the workflow-run-logs to get an overview of the current security state in their project.  
 
 Thus we somehow have to improve the feedback loop implementation for our security findings to proceed with step 4 in our definition of done for continuous security automation. For that purpose follow the next steps:
 
