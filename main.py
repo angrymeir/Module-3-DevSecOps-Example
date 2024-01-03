@@ -14,7 +14,7 @@ def serve_image(state):
 @app.route("/")
 def hello_world():
     try:
-        workflow_runs = requests.get(workflow_runs_url.format(repo), timeout=10).json()['workflow_runs']
+        workflow_runs = requests.get(workflow_runs_url.format(repo)).json()['workflow_runs']
         workflow_states = {}
         for workflow in workflows:
             relevant_workflows = list(filter(lambda x: x['name'] == workflow, workflow_runs))[0]
