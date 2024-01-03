@@ -29,15 +29,15 @@ jobs:
 
 
       ## Start: Version 1
-      #- name: Trivy
-      #  uses: aquasecurity/trivy-action@master
-      #  with:
-      #    image-ref: ${{ steps.meta.outputs.tags }}
-      #    format: 'table'
-      #    exit-code: '1'
-      #  env:
-      #    TRIVY_USERNAME: ${{ github.actor }}
-      #    TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+      - name: Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ steps.meta.outputs.tags }}
+          format: 'table'
+          exit-code: '1'
+        env:
+          TRIVY_USERNAME: ${{ github.actor }}
+          TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
       ## End: Version 1
 
 
