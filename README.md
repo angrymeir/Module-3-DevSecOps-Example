@@ -52,7 +52,7 @@ Thus we somehow have to improve the feedback loop implementation for our securit
 0. Navigate to each of the CI files [sast.yml](.github/workflows/sast.yml), [secrets.yml](.github/workflows/secrets.yml), [trivy_scanning.yml](.github/workflows/trivy_scanning.yml)
 1. Comment out version 1 and uncomment version 2. Commit your changes
 2. Check out the `Actions` tab. Magically your workflows now don't fail anymore. And also the findings are no longer displayed in the logs.
-3. So where are the findings now? Checkout the `Security` tag. Under `Code Scanning` you will find a large list of findings.
+3. So where are the findings now? Checkout the `Security` tab. Under `Code Scanning` you will find a large list of findings.
 4. Check which security activity produced the most findings? Hint: You can filter the findings like so: `is:open branch:main tool:<ToolName>`
 
 ![All workflows finish successfully after aggregationg and visualizing](figures/3.Aggregation_and_visualization_1.png)
