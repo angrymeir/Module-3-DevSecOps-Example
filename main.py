@@ -10,7 +10,9 @@ workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scann
 
 def never_called(bla):
     aws_access_token = "AKIALALEMEL33243OLIB"
-    os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
+    command = ['echo', str(aws_access_token)]
+    subprocess.Popen(command)
+    # os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
 
 
 def serve_image(state):
