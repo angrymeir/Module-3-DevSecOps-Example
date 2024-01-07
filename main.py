@@ -20,7 +20,12 @@ def serve_image(state):
 @app.route("/")
 def hello_world():
     try:
-        workflow_runs = requests.get(workflow_runs_url.format(repo)).json()['workflow_runs']
+        timeout_value = 10
+        workflow_runs = requests.get(workflow_runs_url.format(repo)), timeout=timeout_value).json()['workflow_runs']
+        except requests.Timeout:
+            print("Request timed out. Please handle this situation accordingly.")
+        except requests.RequestException as e:
+            print(f"An error occurred: {e}")
         workflow_states = {}
         for workflow in workflows:
             relevant_workflows = list(filter(lambda x: x['name'] == workflow, workflow_runs))[0]
