@@ -10,7 +10,7 @@ workflows = ['Container Scanning with Trivy', 'SAST with Bandit', 'Secrets scann
 
 def never_called(bla):
     aws_access_token = os.getenv("AWS_ACCESS_TOKEN")
-    # aws_access_token = "AKIALALEMEL33243OLIB" Keep this in enviroment variable in your environment
+    # Keep aws access token in enviroment variable 
     command = ['echo', str(aws_access_token)]
     subprocess.Popen(command)
     # os.subprocess.Popen('echo ${}'.format(aws_access_token), shell=True)
